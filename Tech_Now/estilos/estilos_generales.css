@@ -1,0 +1,290 @@
+
+* {
+   font-size: 15px;
+
+}
+
+#producto {
+    background-color: white;
+    padding: 0%;
+    border-radius: 0px;
+    text-align: center;
+}
+
+#mi_imagen {
+    width:100%;
+    min-width: 200px;
+    max-width: 100px;
+}
+
+#mi_imagen_1 {
+    width:100%;
+    min-width: 200px;
+    max-width: 100px;
+}
+
+#mi_imagen_2 {
+    width:100%;
+    min-width: 200px;
+    max-width: 100px;
+}
+
+
+body {
+    background-color:rgb(192, 201, 208);
+    padding: 0px;
+    margin:0px;
+}
+
+/*-----------------------------------------------------*/
+/* Estilos de la navbar 
+/*-----------------------------------------------------*/
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin:2px;
+    padding: 2px;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+    align-items: center;
+}
+
+nav ul li a{
+    color:rgb(12, 11, 11);
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+nav ul li a:hover{
+    background-color: rgb(237, 13, 13);
+    color: rgb(12, 11, 11);
+    align-items: center;
+}
+
+/*-----------------------------------------------------*/
+/* Estilos de header 
+/*-----------------------------------------------------*/
+
+.encabezado {
+    display: flex;
+    background-color: white;
+    border: 2px solid #777777;
+    align-items: right;
+    padding: 0px 30px;
+}
+
+/*Tamaño de la imagen de encabezado*/
+.encabezado img {
+    width: 280px;
+    height: 400;
+}
+
+#header-text {
+    width: 70%;
+}
+.encabezado div {
+    text-align: auto;
+}
+
+/* Estilos para el elemento de footer dentro del encabezado */
+.encabezado footer {
+    text-align: left; /* Alinea el contenido del footer a la izquierda */
+    padding: 30px; /* Añade espaciado interior al footer si es necesario */
+    border-top: 0px solid #ccc; /* Agrega un borde superior de 1 píxel sólido en color gris claro */
+}
+
+
+/*-----------------------------------------------------*/
+/* Estilos de footer
+/*-----------------------------------------------------*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: 0px solid #777777;
+    align-items: center;
+    padding: 0px 30px;
+    grid-area: pie;
+}
+
+.footer p {
+    color: #333333;
+    font-weight: 600;
+}
+.footer-icons {
+    display: flex;
+    gap: 50px
+}
+
+.footer-icons a {
+    color: #333333;
+
+}
+
+
+.encabezado {
+    font-family: 'Maven Pro', sans-serif;
+    grid-area: cabecera;
+    transition: background-color 0.3s ease;
+    vertical-align: center;
+    text-align: center;
+}
+.menu {
+    text-align: center;
+    font-family: 'Maven Pro', sans-serif;
+    grid-area: barra;
+    background-color: yellow;
+}
+.izquierda {
+    font-family: 'Maven Pro', sans-serif;
+    grid-area: izquierda;
+    background-color: white;
+    padding: 10px;
+}
+
+.derecha {
+    font-family: 'Maven Pro', sans-serif;
+    grid-area:derecha;
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+}
+
+.centro {
+    font-family: 'Maven Pro', sans-serif;
+    grid-area: foto;
+    background-color: red;
+}
+
+.centro_2 {
+    font-family: 'Maven Pro', sans-serif;
+    grid-area: foto;
+    background-color: red;
+
+}
+
+
+.footer {
+    font-family: 'Maven Pro', sans-serif;
+    grid-area: pie;
+}
+/*-----------------------------------------------------*/
+/* Estilos de la grilla para pantallas grandes
+/*-----------------------------------------------------*/
+h1 {
+    font-family: 'Maven Pro', sans-serif; font-size: 30px;
+    justify-content: center;
+    margin-right: 10px;
+}
+.contenedor-grid {
+    font-family: 'Maven Pro', sans-serif;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 4fr;
+    grid-template: auto auto auto auto/ auto auto auto auto;
+    grid-template-areas: "cabecera cabecera cabecera"
+                         "barra barra barra"
+                         "izquierda foto derecha"
+                         "pie pie pie";
+
+}
+/*-----------------------------------------------------*/
+/* Estilos de la grilla para pantallas de tablet
+/*-----------------------------------------------------*/
+@media (max-width: 1280px) {
+    .contenedor-grid {
+        display: grid;
+        grid-template: auto auto auto auto/ 50% 50%;
+        grid-template-areas: "cabecera cabecera"
+                             "barra barra"
+                             "izquierda derecha"
+                             " foto foto "
+                             "pie pie";
+     
+    }
+
+/*-----------------------------------------------------*/
+/* Header mas nav
+/*-----------------------------------------------------*/
+    h1 {
+        font-family: 'Roboto', sans-serif; font-size: 20px;
+    }
+}
+
+/*-----------------------------------------------------*/
+/* Estilos de la grilla para pantallas de moviles
+/*-----------------------------------------------------*/
+@media (max-width: 720px) {
+    .contenedor-grid {
+        display: grid;
+        grid-template: auto auto auto auto auto auto/ auto ;
+        grid-template-areas: "cabecera"
+                             "barra"
+                             "izquierda"
+                             " foto  "
+                             "derecha"
+                             "pie";
+    
+    }
+    h1 {
+        font-family: 'Roboto', sans-serif; font-size: 30px;
+    }
+    nav {
+        font-family: 'Maven Pro', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+/* Aca posiciono la imagen*/
+
+.encabezado {
+    background-color: white; /* Color de fondo opcional para el encabezado */
+    color: rgb(12, 11, 11); /* Color del texto opcional para el encabezado */
+    padding: 10px; /* Espaciado interior opcional para el encabezado */
+}
+
+.header-content {
+    display: flex; /* Utilizamos flexbox para controlar la disposición */
+    align-items: center; /* Centramos verticalmente los elementos dentro de .header-content */
+}
+
+/*Tamañpde la imagen del header*/
+img {
+    max-width: 200px;
+    max-height: 120px; 
+    margin-right: 100px; /*aca separo al nav*/
+    border-radius: 100px;
+}
+
+h1 {
+    margin: 10px; /* Elimina el margen predeterminado alrededor del título */
+}
+
+h3 {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 20px;
+    text-align: center; /* Centro el texto horizontalmente */
+    margin-left: auto; /* Establezco el margen izquierdo como "auto" */
+    margin-right: auto; /* Establezco el margen derecho como "auto" */
+}
+
+
